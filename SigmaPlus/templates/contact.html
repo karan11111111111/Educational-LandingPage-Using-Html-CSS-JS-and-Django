@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/contact.css" />
+
+{% endblock head %}
+
+{% block body %}
+
+<section class="contact">
+  <div class="container contact_container">
+    <aside class="contact_aside">
+      <div class="aside_image">
+        <img src="/static/images/c1.jpeg" alt="" />
+      </div>
+      <h2>Contact Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione modi
+        provident quod.
+      </p>
+      <ul class="contact_details">
+        <li>
+          <i class="uil uil-phone-times"></i>
+          <h5>+912938403987</h5>
+        </li>
+        <li>
+          <i class="uil uil-envelope"></i>
+          <h5>sigmaplus.com</h5>
+        </li>
+        <li>
+          <i class="uil uil-location-point"></i>
+          <h5>Lorem, ipsum.</h5>
+        </li>
+      </ul>
+      <ul class="contact_socials">
+        <li>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="uil uil-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="uil uil-twitter-alt"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" target="_blank"
+            ><i class="uil uil-linkedin-alt"></i
+          ></a>
+        </li>
+      </ul>
+    </aside>
+
+    <form
+      action="https://formspree.io/f/maygjzjp"
+      method="POST"
+      class="contact_form"
+    >
+    {% csrf_token %}
+      <div class="form_name">
+        <input
+          type="text"
+          placeholder="First Name"
+          required
+          name="name1"
+        />
+        <input type="text"placeholder="Last Name" required name="name2"/>
+      </div>
+
+      <input
+        type="email"
+        placeholder="Your Email Address"
+        required
+       name="email"/>
+      <input
+        type="phone"
+        placeholder="Your Phone Number"
+        required
+       name="phone"/>
+
+      <textarea rows="7" required name="desc"></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+{% endblock body %}

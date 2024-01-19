@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | SigmaPlus</title>
+    <!-- iconscout cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- iconscout cdn -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@300;400;500;600;700;900&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <!-- google font -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block head %}
+
+    {% endblock head %}
+
+  
+
+    <!-- css link -->
+
+    <!-- swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- swiper Js -->
+
+</head>
+<style> 
+    body{background-image: url(/staic/images/bgt.png); }
+</style>
+
+
+
+<body style="background-image: url(/staic/images/bgt.png);">
+
+    <!-- navbar -->
+
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html">
+                <h4><big><span id="span1">Sigma</span> </big><big><span id="span2">Plus</span></big></h4>
+            </a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+
+        </div>
+    </nav>
+
+    <!-- navbar -->
+
+    <!-- body -->
+    {% block body %}{% endblock body %} 
+    <!-- body -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4><span id="span1a">Sigma</span> <span id="span2a">Plus</span></h4></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquid.</p>
+            </div>
+
+            <div class="footer_2">
+                <h4>permalinks</h4>
+                <ul class="permalinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Course</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Primary</h4>
+                <ul class="permalinks">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+            </div>
+
+            <div class="footer_4">
+                <h4>Contact Us</h4>
+               <div>
+                <p>+910493004390</p>
+                <p>sigmaPlus@gmail.com</p>
+               </div>
+               <ul class="footer_social">
+                <li><a href="#" class="uil uil-facebook-f"></a></li>
+                <li><a href="#" class="uil uil-instagram-alt"></a></li>
+                <li><a href="#" class="uil uil-twitter"></a></li>
+                <li><a href="#" class="uil uil-linkedin-alt"></a></li>
+               </ul>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <div><small>Copyright &copy;<h5></div>
+           <div><span id="span1b">Sigma</span> <span id="span2b">Plus</span></h5></small></div>
+        </div>
+    </footer>
+    
+    <!-- footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/static/main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            //when window width is >=600px
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
